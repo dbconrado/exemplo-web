@@ -1,0 +1,11 @@
+tbody tr:hover {
+	background-color: #87ceeb;
+}
+
+.selecionado {
+	background-color: #9370db;
+}
+
+.selecionado:hover {
+	background-color: #9370db;
+}

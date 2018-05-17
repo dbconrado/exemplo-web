@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabelas 1</title>
+	<link rel="stylesheet" href="../pure/pure-min.css">
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<h1>Carros e Seus Donos</h1>
+
+	<table class="pure-table">
+		<thead>
+			<tr>
+				<th>Número</th>
+				<th>Modelo</th>
+				<th>Marca</th>
+				<th>Dono</th>
+				<th><input type="checkbox"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Uno</td>
+				<td>Fiat</td>
+				<td>Daniel</td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Corolla</td>
+				<td>Toyota</td>
+				<td>Bruno</td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Fit</td>
+				<td>Honda</td>
+				<td>Cristiane</td>
+				<td><input type="checkbox"></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>C3</td>
+				<td>Citröen</td>
+				<td>Wanda</td>
+				<td><input type="checkbox"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+
+
+		function mudarCor(e) {
+			/*var input = document
+			  .querySelector('tbody input[type=checkbox]');*/
+
+			var input = e.target;
+
+			input
+			  .parentElement
+			  .parentElement
+			  .classList
+			  .toggle('selecionado');
+
+		}
+
+		var vetor = document.querySelectorAll('tbody input[type=checkbox]');
+
+		for (var i = 0; i < vetor.length; i++)
+		{
+			vetor[i].onclick = mudarCor;
+		}
+
+		function selecionarTodos()
+		{
+			var primeiro = document.querySelector('thead input');
+			var outros = document.querySelectorAll('tbody input');
+
+			for (var i = 0; i < outros.length; i++)
+				outros[i].checked = primeiro.checked;
+		}
+
+		document.querySelector('thead input').onclick = selecionarTodos;
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
