@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=utf8');
 echo 'Olá, meu nome é Daniel.';
 
 # Este é o seu primeiro contato com o PHP.
