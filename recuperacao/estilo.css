@@ -22,3 +22,7 @@ tbody tr:hover {
 .selecionado:hover {
 	background-color: #9370db;
 }
+
+.l-box {
+	padding: 0.5em;
+}
