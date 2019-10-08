@@ -6,13 +6,18 @@
 </head>
 <body>
    <p>Clique no botão para mudar a cor do fundo da página</p>
-   <button onclick="mudar()">Clique aqui</button>
+   <button id="btn-mudar-cor">Clique aqui</button>
 
    <script type="text/javascript">
-      function mudar() {
+      /* Defino uma função para mudar a cor de fundo da página */
+      function mudarCorDeFundo() {
          var body = document.querySelector('body');
          body.style.backgroundColor = '#89b6ff';
       }
+
+      /* configuro o clique do botão de id btn-mudar-cor para chamar essa função */
+      var botao = document.querySelector("#btn-mudar-cor");
+      botao.addEventListener('click', mudarCorDeFundo);
    </script>
 </body>
 </html>
